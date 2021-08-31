@@ -1,10 +1,24 @@
-% Programado por: Uriel García Rivas
+%% MIT License
+%%
+%% Copyright (c) 2021 Uriel Rivas
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% https://github.com/Garz4/artificial-intelligence/blob/master/LICENSE
+
+% Programado por: Uriel Garcï¿½a Rivas
 % Neural Networks
-% Escuela Superior de Cómputo, Instituto Politécnico Nacional
+% Escuela Superior de Cï¿½mputo, Instituto Politï¿½cnico Nacional
+
 clc
 disp('1.- Modo Clasificador');
 disp('2.- Modo Regresor');
-o = input('Introduzca la opción deseada: ');
+o = input('Introduzca la opciï¿½n deseada: ');
 if(o == 1)
     bias = -1 + (1+1)*rand(2,1);
     P = [0,0;0,1;0,1;1,1];
@@ -13,8 +27,8 @@ elseif(o == 2)
     load P.txt
     load t.txt
 end
-epochmax = input('Introduzca el número máximo de épocas: ');
-eepoch = input('Introduzca el objetivo a llegar en la señal de error: ');
+epochmax = input('Introduzca el nï¿½mero mï¿½ximo de ï¿½pocas: ');
+eepoch = input('Introduzca el objetivo a llegar en la seï¿½al de error: ');
 alpha = input('Introduzca el valor del factor de aprendizaje: ');
 tam = size(P);
 w = -1 + (1+1)*rand(2,tam(2));
@@ -52,7 +66,7 @@ for target=1:tamtarget(2)
             if(o == 2)
                 figure(contadorgraficas)
                     plot(aprendizaje)
-                    title('Gráfica de aprendizaje')
+                    title('Grï¿½fica de aprendizaje')
                     xlabel('ti (segundos)')
                     ylabel('f(ti)')
                 grid
@@ -61,16 +75,16 @@ for target=1:tamtarget(2)
             if(o == 1)
                 figure(contadorgraficas)
                     plot(bias)
-                    title('Gráfica de evolución de bias')
-                    xlabel('Número de cambios en BIAS')
+                    title('Grï¿½fica de evoluciï¿½n de bias')
+                    xlabel('Nï¿½mero de cambios en BIAS')
                     ylabel('BIAS')
                 grid
                 contadorgraficas = contadorgraficas+1;
             end
             figure(contadorgraficas)
                 plot(w)
-                title('Gráfica de evolución de pesos')
-                xlabel('Número de cambios en W')
+                title('Grï¿½fica de evoluciï¿½n de pesos')
+                xlabel('Nï¿½mero de cambios en W')
                 ylabel('w')
             grid
             disp('Aprendizaje exitoso! Epoca:');
@@ -81,7 +95,7 @@ for target=1:tamtarget(2)
             if(o == 2)
                 figure(contadorgraficas)
                     plot(aprendizaje)
-                    title('Gráfica de aprendizaje')
+                    title('Grï¿½fica de aprendizaje')
                     xlabel('ti (segundos)')
                     ylabel('f(ti)')
                 grid
@@ -90,8 +104,8 @@ for target=1:tamtarget(2)
             if(o == 1)
                 figure(contadorgraficas)
                     plot(bias)
-                    title('Gráfica de evolución de bias')
-                    xlabel('Número de cambios en BIAS')
+                    title('Grï¿½fica de evoluciï¿½n de bias')
+                    xlabel('Nï¿½mero de cambios en BIAS')
                     ylabel('BIAS')
                 grid
                 contadorgraficas = contadorgraficas+1;
@@ -99,8 +113,8 @@ for target=1:tamtarget(2)
             disp('Aprendizaje exitoso! Epoca:');
             figure(contadorgraficas)
                 plot(w)
-                title('Gráfica de evolución de pesos')
-                xlabel('Número de cambios en W')
+                title('Grï¿½fica de evoluciï¿½n de pesos')
+                xlabel('Nï¿½mero de cambios en W')
                 ylabel('w')
             grid
             disp(j);
@@ -110,7 +124,7 @@ for target=1:tamtarget(2)
             if(o == 2)
                 figure(contadorgraficas)
                     plot(aprendizaje)
-                    title('Gráfica de aprendizaje')
+                    title('Grï¿½fica de aprendizaje')
                     xlabel('ti (segundos)')
                     ylabel('f(ti)')
                 grid
@@ -119,16 +133,16 @@ for target=1:tamtarget(2)
             if(o == 1)
                 figure(contadorgraficas)
                     plot(bias)
-                    title('Gráfica de evolución de bias')
-                    xlabel('Número de cambios en BIAS')
+                    title('Grï¿½fica de evoluciï¿½n de bias')
+                    xlabel('Nï¿½mero de cambios en BIAS')
                     ylabel('BIAS')
                 grid
                 contadorgraficas = contadorgraficas+1;
             end
             figure(contadorgraficas)
                 plot(w)
-                title('Gráfica de evolución de pesos')
-                xlabel('Número de cambios en W')
+                title('Grï¿½fica de evoluciï¿½n de pesos')
+                xlabel('Nï¿½mero de cambios en W')
                 ylabel('w')
             grid
             disp('Aprendizaje no exitoso! :( Epoca:');

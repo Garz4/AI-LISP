@@ -1,8 +1,21 @@
+;; MIT License
+;;
+;; Copyright (c) 2021 Uriel Rivas
+;;
+;; Permission is hereby granted, free of charge, to any person obtaining a copy
+;; of this software and associated documentation files (the "Software"), to deal
+;; in the Software without restriction, including without limitation the rights
+;; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+;; copies of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+;;
+;; https://github.com/Garz4/artificial-intelligence/blob/master/LICENSE
+
 ;;=====================================================================
 ;;   Conjunto de reglas para el Problema 1.
-;;       Uriel García Rivas, Instituto Politécnico Nacional
+;;       Uriel Garcï¿½a Rivas, Instituto Politï¿½cnico Nacional
 ;;=====================================================================
-(defrule start          ;;Inicialización de las capibaras.
+(defrule start          ;;Inicializaciï¿½n de las capibaras.
 	:group
 			:initialization
 	:when
@@ -46,7 +59,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(feed-entity @id @id1)
 )
-(defrule busca-algo-o-te-vas-a-morir           ;;Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que más le da su visión  (para que no se tope con agua).
+(defrule busca-algo-o-te-vas-a-morir           ;;Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que mï¿½s le da su visiï¿½n  (para que no se tope con agua).
 	:group
 			:herbivores
 	:when	
@@ -100,7 +113,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(feed-entity @id @id1)
 )
-(defrule muevete-que-te-contaminaaaaaaaaaaaaas            ;;Si su última posición es una posición de 
+(defrule muevete-que-te-contaminaaaaaaaaaaaaas            ;;Si su ï¿½ltima posiciï¿½n es una posiciï¿½n de 
 	:group
 			:herbivores
 	:when	
@@ -115,7 +128,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(feed-entity @id @id1)
 )
-(defrule busca-algo-o-te-vas-a-morir2           ;;Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que más le da su visión  (para que no se tope con agua).
+(defrule busca-algo-o-te-vas-a-morir2           ;;Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que mï¿½s le da su visiï¿½n  (para que no se tope con agua).
 	:group
 			:herbivores
 	:when	

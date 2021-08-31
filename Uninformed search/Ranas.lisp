@@ -1,4 +1,3 @@
-
 ;;;======================================================================================
 ;;;  Ranas.lisp
 ;;;      Resuelve el problema de las ranas en el estanque con búsqueda ciega, a lo profundo y a lo ancho.

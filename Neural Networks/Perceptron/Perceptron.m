@@ -1,8 +1,22 @@
-% Programado por: Uriel García Rivas
+%% MIT License
+%%
+%% Copyright (c) 2021 Uriel Rivas
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% https://github.com/Garz4/artificial-intelligence/blob/master/LICENSE
+
+% Programado por: Uriel Garcï¿½a Rivas
 % Neural Networks
-% Escuela Superior de Cómputo, Instituto Politécnico Nacional
+% Escuela Superior de Cï¿½mputo, Instituto Politï¿½cnico Nacional
+
 disp('(1) Regla de Aprendizaje');
-disp('(2) Método Gráfico');
+disp('(2) Mï¿½todo Grï¿½fico');
 load inputs.txt
 load target.txt
 w = -2 + (2+2)*rand(1,2);
@@ -12,7 +26,7 @@ resultadosW(2,2) = w(2);
 bias = -1 + (1+1)*rand();
 contador = 0;
 tam = size(inputs);
-switch input('Elija una opción:')
+switch input('Elija una opciï¿½n:')
     case 1
         for j=1:5
             contador = 0;
@@ -43,7 +57,7 @@ switch input('Elija una opción:')
              plot([0, w(1)], [0, w(2)], 'red');
              plot([(-3*w(2))-bias, (3*w(2))-bias], [3*w(1), (-3)*w(1)], 'blue');
              hold on
-             title('Gráfica')
+             title('Grï¿½fica')
              xlabel('Eje X')
              ylabel('Eje Y')
             for i=1:tam(1)
@@ -60,12 +74,12 @@ switch input('Elija una opción:')
             hold off
             figure(2)
              plot(resultadosW, '-s');
-             title('Gráfica de evolución de pesos')
-             xlabel('Número de cambios en W')
+             title('Grï¿½fica de evoluciï¿½n de pesos')
+             xlabel('Nï¿½mero de cambios en W')
              ylabel('w')
             grid
         else
-            disp('Aprendizaje no exitoso, inténtelo de nuevo :(');
+            disp('Aprendizaje no exitoso, intï¿½ntelo de nuevo :(');
         end
         
     case 2
@@ -80,12 +94,12 @@ switch input('Elija una opción:')
                 end
             end
             if(contador == tam(1))
-                disp('Método Gráfico exitoso!');
+                disp('Mï¿½todo Grï¿½fico exitoso!');
                 break;
             end
         end
         if(contador ~= tam(1))
-            disp('Método Gráfico no exitoso, inténtelo de nuevo :(');
+            disp('Mï¿½todo Grï¿½fico no exitoso, intï¿½ntelo de nuevo :(');
         end
         if(contador == tam(1))
             figure(1)
@@ -100,7 +114,7 @@ switch input('Elija una opción:')
              plot([0, w(1)], [0, w(2)], 'red');
              plot([(-3*w(2))-bias, (3*w(2))-bias], [3*w(1), (-3)*w(1)], 'blue');
              hold on
-             title('Gráfica')
+             title('Grï¿½fica')
              xlabel('Eje X')
              ylabel('Eje Y')
             for i=1:tam(1)
@@ -117,7 +131,7 @@ switch input('Elija una opción:')
             hold off
         end
     otherwise
-        disp('Número introducido no corresponde, el programa cerrará.');
+        disp('Nï¿½mero introducido no corresponde, el programa cerrarï¿½.');
 end
 
 w2 = -1 + (1+1)*rand(2,2);
@@ -179,7 +193,7 @@ if(contador2 == tamanio(2))
      plot([0, w2(2,1)], [0, w2(2,2)], 'red');
      plot([(-3*w2(2,2))-b(2), (3*w2(2,2))-b(2)], [3*w2(2,1), (-3)*w2(2,1)], 'blue');
      hold on
-     title('Gráfica')
+     title('Grï¿½fica')
      xlabel('Eje X')
      ylabel('Eje Y')
     for i=1:tamanio(1)
@@ -205,8 +219,8 @@ if(contador2 == tamanio(2))
     figure(4)
      plot(rW1, '-s');
      plot(rW2, '-s');
-     title('Gráfica de evolución de pesos')
-     xlabel('Número de cambios en W')
+     title('Grï¿½fica de evoluciï¿½n de pesos')
+     xlabel('Nï¿½mero de cambios en W')
      ylabel('w')
     grid
 end

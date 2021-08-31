@@ -1,6 +1,20 @@
-% Programado por: Uriel García Rivas
+%% MIT License
+%%
+%% Copyright (c) 2021 Uriel Rivas
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% https://github.com/Garz4/artificial-intelligence/blob/master/LICENSE
+
+% Programado por: Uriel Garcï¿½a Rivas
 % Neural Networks
-% Escuela Superior de Cómputo, Instituto Politécnico Nacional
+% Escuela Superior de Cï¿½mputo, Instituto Politï¿½cnico Nacional
+
 numprot = input('Ingrese el numero de vectores prototipo: ');
 numrasg = input('Ingrese el numero de rasgos por vector prototipo: ');
 numinput = input('Ingrese el numero de entradas: ');
@@ -57,9 +71,9 @@ for i=1:numinput %% Comienza la red Hamming
             vectorGRAFICA(t+2,:) = a2(:,1);
             vectorGRAFICA(t+3,:) = a2(:,2);
         end
-        a2(:,2) = poslin(vectorW2*a2(:,1)); %% Función de la capa recurrente
+        a2(:,2) = poslin(vectorW2*a2(:,1)); %% Funciï¿½n de la capa recurrente
         if a2(:,1) == a2(:,2) %% Verifica que los valores se repitan in order to converger
-           disp('convergió');
+           disp('convergiï¿½');
            disp('i = ');
            disp(i);
            disp('t = ');

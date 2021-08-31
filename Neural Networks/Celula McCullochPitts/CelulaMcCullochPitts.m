@@ -1,26 +1,40 @@
-% Programado por: Uriel García Rivas
+%% MIT License
+%%
+%% Copyright (c) 2021 Uriel Rivas
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% https://github.com/Garz4/artificial-intelligence/blob/master/LICENSE
+
+% Programado por: Uriel Garcia Rivas
 % Neural Networks
-% Escuela Superior de Cómputo, Instituto Politécnico Nacional
+% Escuela Superior de Computo, Instituto Politecnico Nacional
+
 x = input('Ingrese el numero de bits (2, 3, 4 o 5):');
 targetNot = [0;1];
 input1 = [1;0];
 epoca = [1; -1; 2; -2; 3; -3; 4; -4; 5; -5];
-for i = 1:size(epoca) %%Compuerta lógica NOT (Estructura casi igual en su totalidad para las otras compuertas)
-    verificador = 0; %%Este contador nos ayudará a saber si una propuesta de solución sirve para toda situación
+for i = 1:size(epoca) %%Compuerta lï¿½gica NOT (Estructura casi igual en su totalidad para las otras compuertas)
+    verificador = 0; %%Este contador nos ayudarï¿½ a saber si una propuesta de soluciï¿½n sirve para toda situaciï¿½n
     theta = epoca(i);
-    w1 = theta; %%Se inicializan los pesos sinápticos
+    w1 = theta; %%Se inicializan los pesos sinï¿½pticos
     for j = 1:size(input1)
         n = input1(j)*w1; %%Se determina n
-        if n > theta %%Se realiza la función f(n)
+        if n > theta %%Se realiza la funciï¿½n f(n)
            a = 1;
         else
             a = 0;
         end
-        if a == targetNot(j) %%Si en d subíndice i es correcto, aumenta el contador
+        if a == targetNot(j) %%Si en d subï¿½ndice i es correcto, aumenta el contador
             verificador = verificador + 1;
         end
     end
-    if verificador == 2 %%Si el contador es igual al tamaño del target, el aprendizaje fue exitoso
+    if verificador == 2 %%Si el contador es igual al tamaï¿½o del target, el aprendizaje fue exitoso
         disp('Aprendizaje exitoso para compuerta NOT!');
         disp('w1 =');
         disp(w1);
@@ -31,7 +45,7 @@ for i = 1:size(epoca) %%Compuerta lógica NOT (Estructura casi igual en su totali
     %%En caso contrario continua al siguiente ciclo y el contador reinicia
 end
 epoca = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14];
-if x == 2 %%Se inicializan los valores de entrada y deseados de acuerdo al número de bits proveído
+if x == 2 %%Se inicializan los valores de entrada y deseados de acuerdo al nï¿½mero de bits proveï¿½do
     targetAnd = [0;0;0;1];
     targetOr = [0;1;1;1];
     input1 = [0;1;0;1];
@@ -67,7 +81,7 @@ if x == 5
     input4 = [0;0;0;0;0;0;0;0;1;1;1;1;1;1;1;1;0;0;0;0;0;0;0;0;1;1;1;1;1;1;1;1];
     input5 = [0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1];
 end
-for i = 1:size(epoca) %% Compuerta lógica AND
+for i = 1:size(epoca) %% Compuerta lï¿½gica AND
     verificador = 0; 
     w1 = epoca(i); 
     w2 = w1;
@@ -158,7 +172,7 @@ for i = 1:size(epoca) %% Compuerta lógica AND
         end
     end
 end
-for i = 1:size(epoca) %% Compuerta lógica OR
+for i = 1:size(epoca) %% Compuerta lï¿½gica OR
     verificador = 0;
     theta = epoca(end-i+1);
     w1 = epoca(i);

@@ -11,11 +11,11 @@
 ;;
 ;; https://github.com/Garz4/artificial-intelligence/blob/master/LICENSE
 
-;;=====================================================================
-;;   Conjunto de reglas para el Problema 1.
-;;       Uriel Garc�a Rivas, Instituto Polit�cnico Nacional
-;;=====================================================================
-(defrule start          ;;Inicializaci�n de las capibaras.
+;; =====================================================================
+;;    Conjunto de reglas para el Problema 1.
+;;        Uriel García Rivas, Instituto Politécnico Nacional
+;; =====================================================================
+(defrule start          ;; Inicialización de las capibaras.
 	:group
 			:initialization
 	:when
@@ -23,7 +23,7 @@
 	:do
 			(set-entities :herbivore 10 :desert)
 )
-(defrule bebe-agua1          ;;Busca agua y bebe, aunque no tenga sed mortal.
+(defrule bebe-agua1          ;; Busca agua y bebe, aunque no tenga sed mortal.
 	:group
 			:herbivores
 	:when	
@@ -39,7 +39,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(drink-water @id)
 )
-(defrule come-algo1           ;;Busca comida y come, aunque no tenga hambre mortal.
+(defrule come-algo1           ;; Busca comida y come, aunque no tenga hambre mortal.
 	:group
 			:herbivores
 	:when	
@@ -59,7 +59,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(feed-entity @id @id1)
 )
-(defrule busca-algo-o-te-vas-a-morir           ;;Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que m�s le da su visi�n  (para que no se tope con agua).
+(defrule busca-algo-o-te-vas-a-morir           ;; Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que más le da su visión  (para que no se tope con agua).
 	:group
 			:herbivores
 	:when	
@@ -78,7 +78,7 @@
 	                (move-entity-to @id @cell2 :diagonal)
 )
 
-(defrule bebe-agua          ;;Busca agua y bebe, aunque no tenga sed mortal.
+(defrule bebe-agua          ;; Busca agua y bebe, aunque no tenga sed mortal.
 	:group
 			:herbivores
 	:when	
@@ -93,7 +93,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(drink-water @id)
 )
-(defrule come-algo           ;;Busca comida y come, aunque no tenga hambre mortal.
+(defrule come-algo           ;; Busca comida y come, aunque no tenga hambre mortal.
 	:group
 			:herbivores
 	:when	
@@ -113,7 +113,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(feed-entity @id @id1)
 )
-(defrule muevete-que-te-contaminaaaaaaaaaaaaas            ;;Si su �ltima posici�n es una posici�n de 
+(defrule muevete-que-te-contaminaaaaaaaaaaaaas            ;; Si su última posición es una posición de 
 	:group
 			:herbivores
 	:when	
@@ -128,7 +128,7 @@
 			(move-entity-to @id @cell2 :diagonal)
 			(feed-entity @id @id1)
 )
-(defrule busca-algo-o-te-vas-a-morir2           ;;Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que m�s le da su visi�n  (para que no se tope con agua).
+(defrule busca-algo-o-te-vas-a-morir2           ;; Cuando se empieza a quedar hambrienta o sedienta la capibara, la obliga a moverse a la izquierda lo que más le da su visión  (para que no se tope con agua).
 	:group
 			:herbivores
 	:when	
@@ -146,4 +146,4 @@
 	:do
 	                (move-entity-to @id @cell2 :diagonal)
 )
-;;=====================================================================
+;; =====================================================================
